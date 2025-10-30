@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hacktoberfest — Beginner Friendly</title>
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--muted:#94a3b8;--accent:#7c3aed}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#071026 0%,#071833 100%);color:#e6eef8;line-height:1.5}
+    .container{max-width:980px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:white}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:8px}
+    .card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;margin-top:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .lang-switch{display:flex;gap:8px;margin-bottom:12px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:inherit;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#06b6d4);border:0}
+    .section{margin-top:12px}
+    .video{background:#071833;border-radius:8px;padding:12px;display:flex;gap:12px;align-items:center}
+    .rules{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:8px}
+    footer{color:var(--muted);font-size:13px;margin-top:18px}
+    pre{white-space:pre-wrap;color:var(--muted);font-size:14px}
+    @media (max-width:640px){.container{margin:18px;padding:16px}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">HF</div>
+      <div>
+        <h1>Hacktoberfest — Beginner Friendly Project</h1>
+        <p class="lead">A welcoming repository to help beginners start contributing to open source during Hacktoberfest.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="lang-switch">
+        <button class="btn" onclick="showLang('en')">English</button>
+        <button class="btn" onclick="showLang('fr')">Français</button>
+        <button class="btn" onclick="showLang('pt')">Português</button>
+        <a class="btn primary" href="#contribute">Get Started</a>
+      </div>
+
+      <section id="en" class="section lang">
+        <h3>English</h3>
+        <p>This is a beginner-friendly project to help you get started with Hacktoberfest. This repository is dedicated to helping beginners step up and join hands with the open-source community. Feel free to start contributing — there are no wrong contributions. If you don't know where to start, watch the videos linked below and read the contribution rules. Happy hacking &lt;3 !!</p>
+        <p class="muted">(P.S: Star and share this repository if you had fun!)</p>
+      </section>
+
+      <section id="fr" class="section lang" style="display:none">
+        <h3>Français</h3>
+        <p>Ceci est un projet pour débutant qui vous permettra de commencer sur Hacktoberfest. Si vous ne savez pas par où commencer, vous pouvez regarder la vidéo (le lien se trouve plus bas) et lire les règles de contribution. Joyeux hacking !! Regarder la vidéo permet de mieux comprendre le fonctionnement de Hacktoberfest et comment créer des pull requests.</p>
+      </section>
+
+      <section id="pt" class="section lang" style="display:none">
+        <h3>Português</h3>
+        <p>Este é um projeto bom para iniciantes para ajudar você a começar a contribuir com o Hacktoberfest. Se você não sabe por onde começar, fique à vontade para assistir aos vídeos relacionados abaixo e leia as regras de contribuição. Bom hacking &lt;3 !! Ao assistir ao vídeo, você entenderá melhor sobre o funcionamento do Hacktoberfest e como será possível criar pull requests. P.S. Dê uma estrela e compartilhe este repositório se você se divertiu!</p>
+      </section>
+
+      <div class="section" id="contribute">
+        <h3>How to contribute</h3>
+        <div class="rules">
+          <ol>
+            <li>Fork the repository and clone it to your machine.</li>
+            <li>Create a new branch: <code>git checkout -b feature/your-name</code>.</li>
+            <li>Make your changes and commit them with a clear message.</li>
+            <li>Push to your fork and open a Pull Request to the main repository.</li>
+            <li>If required, open an issue first and discuss your idea with the maintainers.</li>
+          </ol>
+        </div>
+
+        <h4 style="margin-top:12px">Helpful resources</h4>
+        <div class="video">
+          <div style="flex:1">
+            <strong>Intro video</strong>
+            <p class="muted">(Replace this with your YouTube link or embed code)</p>
+            <pre>// Example embed:
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
+          </div>
+        </div>
+
+        <h4 style="margin-top:12px">Contribution rules (quick)</h4>
+        <div class="rules">
+          <ul>
+            <li>Be respectful and follow the code of conduct.</li>
+            <li>Make small, focused pull requests.</li>
+            <li>Write a helpful description for your PR.</li>
+            <li>Tag the PR with appropriate labels (if you can).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;align-items:center">
+        <a class="btn" href="#">⭐ Star this repo</a>
+        <a class="btn" href="#">🔗 Share</a>
+        <a class="btn" href="https://hacktoberfest.com" target="_blank">Hacktoberfest</a>
+      </div>
+
+      <footer>
+        <p>Made with ❤️ for beginners. Customize this page in your repo as <code>hacktoberfest.html</code> or add it to your README as a linked demo.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function showLang(code){
+      document.querySelectorAll('.lang').forEach(el=>el.style.display='none');
+      var el = document.getElementById(code);
+      if(el) el.style.display = 'block';
+      window.location.hash = code;
+    }
+    // show language from hash if present
+    (function(){
+      var h = location.hash.replace('#','');
+      if(h) showLang(h);
+    })();
+  </script>
+</body>
+</html>
